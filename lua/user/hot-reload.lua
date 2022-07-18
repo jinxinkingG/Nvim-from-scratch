@@ -18,7 +18,7 @@ local function _replace(old, new, repeat_tbl)
 
   --收集该删除的
   local dellist = {}
-  for k, v in pairs(old) do
+  for k in pairs(old) do
     if not new[k] then
       table.insert(dellist, k)
     end
@@ -28,7 +28,7 @@ local function _replace(old, new, repeat_tbl)
   end
 
   --增加和替换
-  for k, v in pairs(new) do
+  for k in pairs(new) do
     if not old[k] then
       old[k] = new[k]
     else
@@ -46,7 +46,7 @@ local function _replace(old, new, repeat_tbl)
   end
 end
 
-function reload(mod)
+function Reload(mod)
   if not package.loaded[mod] then
     local m = require(mod)
     return m
