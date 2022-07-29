@@ -136,7 +136,7 @@ vim.api.nvim_set_keymap("n", "=", "<cmd>JABSOpen<cr>", { noremap = true, silent 
 -- alt binds
 -- keymap("n", "<m-s>", "<cmd>split<cr>", opts)
 keymap("n", "<m-v>", "<cmd>vsplit<cr>", opts)
-keymap("n", "<m-q>", "<cmd>:q<cr>", opts)
+--keymap("n", "<m-q>", "<cmd>:q<cr>", opts)
 
 M.show_documentation = function()
   local filetype = vim.bo.filetype
@@ -165,7 +165,7 @@ vim.api.nvim_set_keymap(
 keymap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 keymap("x", "<m-/>", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
 
-vim.api.nvim_set_keymap("n", "<tab>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
+--vim.api.nvim_set_keymap("n", "<tab>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 vim.api.nvim_set_keymap("n", "<m-g>", "<cmd>Telescope git_branches<cr>", opts)
   -- l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
 
